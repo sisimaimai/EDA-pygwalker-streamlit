@@ -1,12 +1,12 @@
 import streamlit as st
-import pandas as pd
+import polars as pl
 from google.cloud import bigquery
 
 
-def get_data(query: str) -> pd.DataFrame:
+def get_data(query: str) -> pl.DataFrame:
     print("クエリ", query)
     client = bigquery.Client()
-    return client.query_and_wait(query).to_dataframe()
+    return pl.from_arrow(client.query_and_wait(query).to_arrow())
 
 
 def initialize_state():
