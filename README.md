@@ -1,5 +1,7 @@
 # EDA-pygwalker-streamlit
 
+BigQueryからデータを取得してpygwalkerでごにょごにょできるEDAツール的なもの
+
 ## usage
 
 1. gcloudのADCを取得します
