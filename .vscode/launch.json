@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "debugpy",
+            "request": "launch",
+            "module": "streamlit",
+            "name": "Streamlit Launcher",
+            "args": [
+                "run",
+                "${workspaceFolder}/main.py"
+            ]
+        }
+    ]
+}
